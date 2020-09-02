@@ -3,6 +3,7 @@ html { height: 100%; width: 100%; font-size: 100%; background: #000000; height: 
 .hidden { display: none; }
 
 :root {
+	--header-font: 'Balsamiq Sans', cursive;
 	--main-font: 'Roboto Mono', monospace;
 	--secondary-font: 'Alata', sans-serif;
 }
@@ -41,7 +42,9 @@ html { height: 100%; width: 100%; font-size: 100%; background: #000000; height: 
 #header .logo { 
 	text-align: center; 
 	font-weight: 400;
+	text-align: left;
 	cursor: pointer;
+	font-family: var(--main-font);
 }
 
 .nav-list { list-style: none; font-weight: 400;}
@@ -126,7 +129,7 @@ html { height: 100%; width: 100%; font-size: 100%; background: #000000; height: 
 	display: block;
 }
 
-.home-slider div {
+.home-slider div, .kitty_caddy-slider div {
 	position: relative;
 	height: 400px;
 	width: 90%;
@@ -157,6 +160,10 @@ html { height: 100%; width: 100%; font-size: 100%; background: #000000; height: 
 	.leather .homebanner-header { top:35%; }
 }
 
+/*-------------------------
+	CONTACT + QUOTE
+--------------------------*/
+
 #quick-contact {
 	padding-top: 10px;
 	height: 100px;
@@ -174,7 +181,58 @@ html { height: 100%; width: 100%; font-size: 100%; background: #000000; height: 
 	cursor: pointer;
 }
 
-#quick-contact .fa-facebook { background-color:#2f81ed; }
 #quick-contact .fa-instagram { background-color: #e13450; }
-#quick-contact .fa-twitter { background-color: #3d9cec; }
+#quick-contact .fa-envelope-o { background-color: #3d9cec; font-size: 27px;}
 
+#quote { width: 100%; }
+#quote .container {
+	padding: 15px 25px;
+	margin: 0 auto;
+	height: 300px;
+	width: 90%;
+	background-image: url('images/gwc.JPG');
+	background-size: contain;
+	background-position: center;
+	background-repeat: repeat-x;
+}
+
+#quote .container:hover { 
+	background-image: url('images/getWell.JPG');
+}
+
+.services_text {
+	color: #fff;
+	font-family: var(--secondary-font);
+	font-size: 12px;
+	text-align: left;
+}
+@media (min-width: 768px){
+	.services_text { font-size: 20px; text-align: center;}
+}
+
+.services_text span {
+	display: block; 
+	height: 120px;
+ }
+
+ /*-------------------------
+		DESIGNS
+--------------------------*/
+#designs { width: 100%; }
+.designs_header, .kitty_caddy { 
+	margin: 50px auto 20px; 
+	text-align: center;
+	font-family: var(--main-font);
+	color: #fff;
+}
+
+.designs_header h3 { font-size: 30px; }
+.kitty_caddy h4 { font-size: 18px;}
+
+.kitty_caddy {
+	width: 85%;
+	height: 500px;
+}
+
+.slick-dots li button:before { color: #949494 !important;}
+.slick-dots li.slick-active button:before { color: #fff !important;}

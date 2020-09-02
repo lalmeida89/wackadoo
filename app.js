@@ -1,6 +1,7 @@
 $(document).ready(function () {
 	$('.home-slider').slick({
 		arrows: false,
+		dots: false,
 		autoplay: true,
 		autoplaySpeed: 3000,
 		slidesToShow: 1,
@@ -8,7 +9,17 @@ $(document).ready(function () {
 		infinite: true,
 		adaptiveHeight: true,
 		fade: true,
-		cssEase: 'linear'
+		cssEase: 'linear',
+	});
+	$('.kitty_caddy-slider').slick({
+		arrows: true,
+		dots: true,
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		infinite: false,
+		adaptiveHeight: true,
+		cssEase: 'linear',
+		centerPadding: 0
 	});
 	$(window).scroll(function () {
 		var height = $(window).scrollTop();
