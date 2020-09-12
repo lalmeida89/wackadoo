@@ -11,7 +11,7 @@ $(document).ready(function () {
 		fade: true,
 		cssEase: 'linear',
 	});
-	$('.kitty_caddy-slider').slick({
+	$('.design-slider').slick({
 		arrows: true,
 		dots: true,
 		slidesToShow: 2,
@@ -35,5 +35,11 @@ $(document).ready(function () {
 		} else {
 			$('.mobile-nav-container').removeClass('active').addClass('inactive');
 		}
+	})
+	$('.mobile-nav-list li a').click(function () {
+		$('.menu-button').click();
+	})
+	$('.nav-list li.designs').click(function () {
+		$('html, body').animate({ scrollTop: $('#designs').offset().top - 100 }, 'slow');
 	})
 })
