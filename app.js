@@ -44,7 +44,7 @@ $(document).ready(function () {
 		$('html, body').animate({ scrollTop: $('#designs').offset().top - 100 }, 'slow');
 	})
 	$('.nav-list li.about').click(function () {
-		$('html, body').animate({ scrollTop: $('#leather').offset().top - 150 }, 'slow');
+		$('html, body').animate({ scrollTop: $('#leather').offset().top + 100}, 'slow');
 	})
 	$('.nav-list li.contact').click(function () {
 		$('html, body').animate({ scrollTop: $('#footer').offset().top }, 'slow');
