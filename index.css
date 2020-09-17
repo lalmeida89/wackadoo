@@ -1,4 +1,5 @@
 * { box-sizing: border-box; }
+body { margin: 0;}
 html { height: 100%; width: 100%; font-size: 100%; background: #000000;}
 .hidden { display: none; }
 
@@ -11,10 +12,10 @@ html { height: 100%; width: 100%; font-size: 100%; background: #000000;}
 /*-------------------------
 		  HEADER
 --------------------------*/
-#header { 
+#header {
 	z-index: 5;
-	height: 90px; 
-	padding: 15px 40px 20px 40px; 
+	height: 90px;
+	padding: 15px 40px 20px 40px;
 	position: fixed;
 	width: 100%;
 	left: 0;
@@ -39,8 +40,8 @@ html { height: 100%; width: 100%; font-size: 100%; background: #000000;}
 #header .container { display: flex; justify-content: space-between; align-items: center; }
 #header i { font-size: 35px; cursor: pointer; }
 #header span { line-height: 20px; }
-#header .logo { 
-	text-align: center; 
+#header .logo {
+	text-align: center;
 	font-weight: 400;
 	text-align: left;
 	cursor: pointer;
@@ -105,16 +106,16 @@ html { height: 100%; width: 100%; font-size: 100%; background: #000000;}
 #homebanner {
 	width: 100%;
 	margin: 100px auto 70px;
-	height: auto;
+	height: 90vh;
 }
 
 .home-slider-container {
 	height: 100%;
 	width: 100%;
-}	
+}
 
 .home-slider {
-	height: 50vh;
+	height: 100%;
 	width: 100%;
 	display: block;
 }
@@ -138,7 +139,7 @@ html { height: 100%; width: 100%; font-size: 100%; background: #000000;}
 	top: 20%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	font-size: 40px;
+	font-size: 90px;
 	color: #fff;
 	font-family: var(--secondary-font);
 	font-weight: 400;
@@ -147,8 +148,11 @@ html { height: 100%; width: 100%; font-size: 100%; background: #000000;}
 	letter-spacing: 16px;
 }
 
+.leather .homebanner-header { top:35%; }
+
 @media only screen and (max-width: 800px){
-	.leather .homebanner-header { top:35%; }
+	.homebanner-header {font-size: 9vw}
+	#homebanner {height: 55vh; margin: 80px auto 25px;}
 }
 
 /*-------------------------
@@ -175,38 +179,38 @@ html { height: 100%; width: 100%; font-size: 100%; background: #000000;}
 
 #quick-contact .fa-instagram { background-color: #e13450; }
 #quick-contact .fa-envelope-o { background-color: #3d9cec; font-size: 27px;}
-.services_text span {display: block; height: 120px;}
-#quote .container:hover { background-image: url('images/getWell.JPG');}
-#quote { width: 100%; }
+
+#quote { margin: 0 auto 80px;}
 
 #quote .container {
-	padding: 15px 25px;
-	margin: 0 auto;
-	height: 300px;
-	max-width: 850px;
-	width: 90%;
-	background-image: url('images/gwc.JPG');
-	background-size: contain;
+	padding: 0 25px;
+	background-image: url('images/getWell.JPG');
+	background-size: cover;
 	background-position: center;
-	background-repeat: repeat-x;
+	background-repeat: no-repeat;
 }
 
 .services_text {
 	color: #fff;
 	font-family: var(--secondary-font);
-	font-size: 12px;
-	text-align: left;
+	text-align: center;
 }
 @media (min-width: 768px){
-	.services_text { font-size: 20px; text-align: center;}
+	#quote { width: 500px; height: 350px; }
+	.services_text { font-size: 16px; padding: 10px 0 35px;}
+	.services_text span {display: block; height: 175px;}
 	#quick-contact { margin-bottom: 50px;}
 }
 @media (max-width: 767px){
+	#quote { width: 350px; height: 200px;}
+	.services_text { font-size: 11px;	padding: 10px 0 15px;}
+	.services_text span {display: block; height: 115px;}
 	#quick-contact { margin-bottom: 5px;}
+
 }
 
  /*-------------------------
-		DESIGNS
+				DESIGNS
 --------------------------*/
 #designs { width: 100%; max-width: 1000px; margin: 80px auto;}
 .designs_header h3 { font-size: 30px; margin: 50px auto 20px; }
@@ -218,12 +222,12 @@ html { height: 100%; width: 100%; font-size: 100%; background: #000000;}
 .slick-dots li button:before { color: #949494 !important;}
 .slick-dots li.slick-active button:before { color: #fff !important;}
 
-.designs_header, .dl-container { 
+.designs_header, .dl-container {
 	text-align: center;
 	font-family: var(--main-font);
 	color: #fff;
 }
-.dl-container h4 { 
+.dl-container h4 {
 	font-size: 18px;
     border-top: 4px solid #808080;
     border-bottom: 4px solid #808080;
@@ -242,4 +246,60 @@ html { height: 100%; width: 100%; font-size: 100%; background: #000000;}
 	.eyeball.dl-container, .leather.dl-container {height: 360px;}
 	.dl-container {margin: 50px auto 240px; }
 	.dl-container h4 { margin: 0 auto 40px; }
+}
+
+/*-------------------------
+	      FOOTER
+--------------------------*/
+#footer {width: 100%; margin: 0 auto;}
+#footer .container {
+	width: 100%;
+	height: 150px;
+	margin: 0 auto;
+	background-image: url('images/logo.jpg');
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	filter: sepia(1);
+}
+
+#footer .text_container {
+	display: flex;
+
+  height: 100%;
+
+  padding: 0 20px;
+	font-family: var(--main-font);
+	color: #000;
+}
+
+#footer .right a { text-decoration: none; }
+
+
+@media screen and (max-width: 767px){
+	#footer .container {
+		background-position: left;
+	}
+	#footer .text_container {
+		font-size: 10px;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	#footer .right {text-align: left;}
+	#footer .right a {color: #000; font-size: 8.5px;}
+}
+@media screen and (min-width: 768px){
+	#footer .container {
+		background-position: center 25%;
+	}
+	#footer .text_container {
+		font-size: 14px;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	#footer .right {text-align: right;}
+	#footer .right a {color: #fff; }
 }

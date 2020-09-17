@@ -12,6 +12,7 @@ $(document).ready(function () {
 		cssEase: 'linear',
 	});
 	$('.design-slider').slick({
+		lazyLoad: 'ondemand',
 		arrows: true,
 		dots: true,
 		slidesToShow: 2,
@@ -36,10 +37,16 @@ $(document).ready(function () {
 			$('.mobile-nav-container').removeClass('active').addClass('inactive');
 		}
 	})
-	$('.mobile-nav-list li a').click(function () {
+	$('.mobile-nav-list li').click(function () {
 		$('.menu-button').click();
 	})
 	$('.nav-list li.designs').click(function () {
 		$('html, body').animate({ scrollTop: $('#designs').offset().top - 100 }, 'slow');
+	})
+	$('.nav-list li.about').click(function () {
+		$('html, body').animate({ scrollTop: $('#quote').offset().top - 600 }, 'slow');
+	})
+	$('.nav-list li.contact').click(function () {
+		$('html, body').animate({ scrollTop: $('#footer').offset().top }, 'slow');
 	})
 })
