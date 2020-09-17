@@ -12,7 +12,7 @@ $(document).ready(function () {
 		cssEase: 'linear',
 	});
 	$('.design-slider').slick({
-		lazyLoad: 'ondemand',
+		lazyLoad: 'progressive',
 		arrows: true,
 		dots: true,
 		slidesToShow: 2,
