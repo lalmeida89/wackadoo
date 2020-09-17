@@ -49,4 +49,7 @@ $(document).ready(function () {
 	$('.nav-list li.contact').click(function () {
 		$('html, body').animate({ scrollTop: $('#footer').offset().top }, 'slow');
 	})
+	$('#header .logo').click(function(){
+		$('html, body').animate({ scrollTop: $('#homebanner').offset().top - 200}, 'slow');
+	})
 })
